@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LogKit_Example' do
+  pod 'LogKit', :path => '../'
+
+  target 'LogKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
