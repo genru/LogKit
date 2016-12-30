@@ -5,6 +5,7 @@
 //
 
 #import <Availability.h>
+#import <LogKit/Logcat.h>
 
 #ifndef __IPHONE_5_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."
@@ -13,4 +14,10 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+#endif
+
+#ifdef DEBUG
+static const int ddLogLevel = DDLogFlagDebug;
+#else
+static const int ddLogLevel = DDLogFlagWarning;
 #endif
